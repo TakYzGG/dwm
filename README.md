@@ -2,5 +2,6 @@
 
 ## Parches
 - attachaside
+- cfacts-vanitygaps
 - restartsig
 - systray

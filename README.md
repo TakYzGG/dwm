@@ -4,6 +4,7 @@
 - attachaside
 - bar-height
 - cfacts-vanitygaps
+- cyclelayouts
 - movestack
 - restartsig
 - systray

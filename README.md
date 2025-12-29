@@ -6,5 +6,6 @@
 - cfacts-vanitygaps
 - cyclelayouts
 - movestack
+- notitle
 - restartsig
 - systray

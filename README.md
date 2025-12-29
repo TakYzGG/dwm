@@ -9,3 +9,6 @@
 - notitle
 - restartsig
 - systray
+
+## Smart borders
+cuando hay una sola ventana no dibuja los bordes

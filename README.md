@@ -3,3 +3,4 @@
 ## Parches
 - attachaside
 - restartsig
+- systray

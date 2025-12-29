@@ -3,5 +3,6 @@
 ## Parches
 - attachaside
 - cfacts-vanitygaps
+- movestack
 - restartsig
 - systray

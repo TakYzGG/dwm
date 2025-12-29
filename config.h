@@ -100,13 +100,13 @@ static const Key keys[] = {
 	{ MODKEY, 						XK_F12,	   spawn,		   SHCMD("PowerMenu") },
 
     // volumen
-	{ 0, XF86XK_AudioRaiseVolume,	spawn,		   SHCMD("pamixer -i 5") },
-	{ 0, XF86XK_AudioLowerVolume, 	spawn,		   SHCMD("pamixer -d 5") },
-	{ 0, XF86XK_AudioMute,			spawn,		   SHCMD("pamixer -t") },
+	{ 0, XF86XK_AudioRaiseVolume,	spawn,		   SHCMD("pamixer -i 5 && kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioLowerVolume, 	spawn,		   SHCMD("pamixer -d 5 && kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_AudioMute,			spawn,		   SHCMD("pamixer -t && kill -44 $(pidof dwmblocks)") },
 
     // brillo
-	{ 0, XF86XK_MonBrightnessUp,   	spawn,		   SHCMD("brightnessctl set +5%") },
-	{ 0, XF86XK_MonBrightnessDown,  spawn,		   SHCMD("brightnessctl set 5%-") },
+	{ 0, XF86XK_MonBrightnessUp,   	spawn,		   SHCMD("brightnessctl set +5% && kill -44 $(pidof dwmblocks)") },
+	{ 0, XF86XK_MonBrightnessDown,  spawn,		   SHCMD("brightnessctl set 5%- && kill -44 $(pidof dwmblocks)") },
 
     // cambir de ventana
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },

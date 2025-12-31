@@ -84,6 +84,8 @@ static const Layout layouts[] = {
 #include "movestack.c"
 #include <X11/XF86keysym.h>
 
+#define MENUS "$HOME/.config/menus/"
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
     // programas
@@ -94,10 +96,10 @@ static const Key keys[] = {
 	{ MODKEY, 						XK_m, 	   spawn,		   SHCMD("st -e cmus") },
 
     // scripts
-	{ MODKEY, 						XK_F2, 	   spawn,		   SHCMD("Screenshot") },
-	{ MODKEY, 						XK_F3, 	   spawn,		   SHCMD("AppImage") },
-	{ MODKEY, 						XK_F11,	   spawn,		   SHCMD("Wallpaper") },
-	{ MODKEY, 						XK_F12,	   spawn,		   SHCMD("PowerMenu") },
+	{ MODKEY, 						XK_F2, 	   spawn,		   SHCMD(MENUS "Screenshot") },
+	{ MODKEY, 						XK_F3, 	   spawn,		   SHCMD(MENUS "AppImage") },
+	{ MODKEY, 						XK_F11,	   spawn,		   SHCMD(MENUS "Wallpaper") },
+	{ MODKEY, 						XK_F12,	   spawn,		   SHCMD(MENUS "PowerMenu") },
 
     // volumen
 	{ 0, XF86XK_AudioRaiseVolume,	spawn,		   SHCMD("pamixer -i 5 && kill -44 $(pidof dwmblocks)") },
@@ -126,8 +128,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
 
     // cambiar layout
-	{ MODKEY,		                XK_Tab,    cyclelayout,    {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_Tab,    cyclelayout,    {.i = +1 } },
+	{ MODKEY,		                XK_Tab,    cyclelayout,    {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_Tab,    cyclelayout,    {.i = -1 } },
 
     // cambiar modo tiling / floating
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },

@@ -92,6 +92,7 @@ static const Key keys[] = {
 	{ MODKEY,			 			XK_Return, spawn,		   SHCMD("st") },
 	{ MODKEY, 						XK_F1, 	   spawn,		   SHCMD("dmenu_run -i -p 'Ejecutar'") },
 	{ MODKEY, 						XK_w, 	   spawn,		   SHCMD("librewolf") },
+	{ MODKEY, 						XK_n, 	   spawn,		   SHCMD("st -e nvim") },
 	{ MODKEY, 						XK_e, 	   spawn,		   SHCMD("st -e lf") },
 	{ MODKEY, 						XK_m, 	   spawn,		   SHCMD("st -e cmus") },
 

@@ -1496,11 +1496,12 @@ resizeclient(Client *c, int x, int y, int w, int h)
 	c->oldh = c->h; c->h = wc.height = h;
 	wc.border_width = c->bw;
 
-	if (smartborders 
-	    && nexttiled(c->mon->clients) == c 
-	    && !nexttiled(c->next) 
-	    && !c->isfullscreen 
-	    && !c->isfloating) {
+    if (smartborders
+        && c->mon->lt[c->mon->sellt]->arrange
+        && nexttiled(c->mon->clients) == c
+        && !nexttiled(c->next)
+        && !c->isfullscreen
+        && !c->isfloating) {
 	    wc.border_width = 0;
 	    c->w = wc.width += c->bw * 2;
 	    c->h = wc.height += c->bw * 2;

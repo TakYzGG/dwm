@@ -91,7 +91,7 @@ static const Key keys[] = {
     // programas
 	{ MODKEY,			 			XK_Return, spawn,		   SHCMD("st") },
 	{ MODKEY|ShiftMask,			 	XK_Return, spawn,		   SHCMD("st -e tmux") },
-	{ MODKEY, 						XK_F1, 	   spawn,		   SHCMD("dmenu_run -i -p 'Ejecutar'") },
+	{ MODKEY, 						XK_F1, 	   spawn,		   SHCMD("dmenu_run -i") },
 	{ MODKEY, 						XK_w, 	   spawn,		   SHCMD("librewolf") },
 	{ MODKEY, 						XK_n, 	   spawn,		   SHCMD("st -e nvim") },
 	{ MODKEY, 						XK_e, 	   spawn,		   SHCMD("st -e lf") },
